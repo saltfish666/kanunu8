@@ -25,6 +25,7 @@ function download(start,end){
                     if (err) throw err;
                     console.log(`done ${i}.html`)
                   });*/
+                  ws.end()
                 console.log(`done ${i}.html`)
             });
       }).on('error', function(e) {
@@ -34,17 +35,6 @@ function download(start,end){
 }
 
 (async function(){
-  /*try{
-    await p_mkdir("./downloads")
-  }catch(e){}
-
-  try{
-    await p_mkdir("./downloads/book")
-  }catch(e){}
-
-  try{
-    await p_mkdir("./downloads/book/4430")
-  }catch(e){}*/
   try{
     await p_mk_path_dir("./downloads/book/4430")
   }catch(e){
